@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The head section contains metadata and links to stylesheets and scripts. 
+         The character set is set to UTF-8 for proper encoding of characters,
+         and the viewport meta tag ensures responsive design on mobile devices. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancer Forum</title>
+    <link rel="stylesheet" href="styles.css" /> <!-- Link to an external CSS file for styling -->
+    <script src="index.js" defer></script> <!-- Link to an external JavaScript file that loads after the HTML is parsed -->
+  </head>
+  <body>
+    <!-- The body section contains the visible content of the webpage. 
+         It includes a main heading, a paragraph for displaying average starting prices, 
+         and a table that lists available freelancers along with their details. -->
+    <h1>Freelancer Forum</h1>
+    <p id="ave-starting-price"></p> <!-- Placeholder for the average starting price of freelancers -->
+    <table>
+      <caption>Available Freelancers</caption> <!-- Title for the table -->
+      <thead>
+        <tr>
+          <th>Name</th> <!-- Column header for freelancer names -->
+          <th>Occupation</th> <!-- Column header for freelancer occupations -->
+          <th>Starting Price</th> <!-- Column header for starting prices of freelancers -->
+        </tr>
+      </thead>
+      <tbody id="freelancer-listings"></tbody> <!-- Container for dynamically generated freelancer listings -->
+    </table>
+  </body>
+</html>

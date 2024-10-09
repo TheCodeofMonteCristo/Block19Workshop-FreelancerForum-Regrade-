@@ -1,0 +1,148 @@
+/*Overall Pseudocode Explaining how this Page Functions:
+
+
+Explanation of Functionality:
+Global Styles:
+
+line-height and color: Added consistent line height and text color to enhance readability across the document.
+Body Enhancements:
+
+Gap & Padding: Increased the gap between elements for better spacing, added padding to the body for layout consistency.
+Background Color: Applied a light background to make the content stand out.
+Flexbox Layout: Ensures that elements are centered and spaced vertically.
+Header Styles:
+
+Added a gradient background and customized fonts to make headers more visually appealing.
+*/
+
+
+
+
+
+
+
+/* Global styles are applied to all elements, setting padding, margin, and box-sizing for consistent layout.
+   The 'font-family' ensures a readable font across the entire document. */
+   * { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /* Adds consistent line-height for better readability across elements */
+    color: #333; /* Default text color for the document */
+}
+
+/* The body uses flexbox to arrange its child elements in a column, centered horizontally,
+   with a gap between them for spacing. It also includes a background color and adjusts the width for a more defined layout. */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem; /* Adds more spacing between elements */
+    background-color: #f9f9f9; /* Light background color for visual contrast */
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2rem; /* Adds padding around the edges of the body */
+}
+
+/* Style for headers, giving them a distinct look with custom fonts, padding, and a gradient effect */
+h1, h2, h3 {
+    font-family: 'Georgia', serif; /* Headers have a different font for distinction */
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6b6b, #ffd93d); /* Adds a gradient background to headers */
+    color: white;
+    border-radius: 8px; /* Rounds the corners of headers */
+    width: 100%; /* Ensures the header takes up the full width of its container */
+    max-width: 900px;
+}
+
+/* Adds a container style for the table area, centering it on the page and adding shadow and background for clarity */
+.table-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px; /* Soft rounded corners for the table container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a more modern design */
+    max-width: 800px;
+    width: 100%; /* Ensures the container is responsive and fills available space */
+}
+
+/* Styles for the caption, giving it a larger, bold font and spacing it away from the table */
+caption {
+    font-size: 1.8rem; /* Increases font size for better visibility */
+    font-weight: 700;
+    margin-bottom: 1.5rem; /* Adds space between the caption and the table */
+    color: #ff6b6b; /* Adds a distinct color for the caption text */
+    text-transform: uppercase; /* Makes the caption text all uppercase */
+}
+
+/* Table styling ensures headers and rows have padding for better readability, with borders for clarity */
+table {
+    border-collapse: collapse; /* Ensures table borders don't double up */
+    width: 100%; /* Makes sure the table takes full width of its container */
+    background-color: #fff;
+}
+
+th, td {
+    text-align: left;
+    padding: 1.5rem; /* Increases padding for more spacing */
+    border: 1px solid #ddd; /* Adds borders between cells for a structured look */
+}
+
+/* Table header gets a distinct background and font color for differentiation */
+th {
+    background-color: #ff6b6b; /* Bold red background for headers */
+    color: white; /* White text for better contrast */
+    font-size: 1.2rem;
+    font-weight: 600; /* Slightly bolder font */
+}
+
+/* Zebra striping for table rows for better readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+/* Hover effect for table rows, giving them a background color when hovered */
+tr:hover {
+    background-color: #ffe066; /* Soft yellow highlight on hover */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+}
+
+/* Adding styles for buttons inside the body, ensuring consistency in their appearance */
+button {
+    padding: 0.8rem 1.2rem; /* Adds space inside the button for a clickable area */
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adds a smooth transition for background color on hover */
+}
+
+/* Button hover effect to change background color and provide a visual response to user interaction */
+button:hover {
+    background-color: #ff4747; /* Darker red background on hover */
+}
+
+/* Media query to handle responsiveness on smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem; /* Reduces padding for smaller screens */
+        gap: 1rem; /* Reduces space between elements */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Smaller font sizes for headers */
+    }
+
+    th, td {
+        padding: 1rem; /* Reduces padding in table cells */
+    }
+
+    button {
+        padding: 0.6rem 1rem; /* Smaller padding for buttons */
+    }
+}
